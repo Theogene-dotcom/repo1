@@ -1,0 +1,197 @@
+
+{% load static %}
+
+{% block title %}Our Services{% endblock title %}
+
+{% block main-content %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h3 {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .service-category {
+            margin: 2rem 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        ul ul {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        ul ul li {
+            background-color: #fff;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container ul ul {
+            padding-left: 20px;
+        }
+
+        /* Menu styling */
+        .menu {
+            background-color: #007BFF; /* Blue background color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        .menu a {
+            color: white; /* White text color for contrast */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .menu a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/services/">Services</a>
+        <a href="/contact/">Contact</a>
+    </div>
+
+    <div class="container">
+        <section class="service-category">
+            <h2>E-commerce Platform</h2>
+            <p>Isoko.rw offers a wide range of products across various categories to meet all your shopping needs. Our categories include:</p>
+            <ul>
+                <li><strong>Electronics</strong>
+                    <ul>
+                        <li>Smartphones</li>
+                        <li>Laptops</li>
+                        <li>Televisions</li>
+                        <li>Accessories</li>
+                    </ul>
+                </li>
+                <li><strong>Home Appliances</strong>
+                    <ul>
+                        <li>Refrigerators</li>
+                        <li>Washing Machines</li>
+                        <li>Microwaves</li>
+                        <li>Air Conditioners</li>
+                    </ul>
+                </li>
+                <li><strong>Fashion</strong>
+                    <ul>
+                        <li>Men's Clothing</li>
+                        <li>Women's Clothing</li>
+                        <li>Footwear</li>
+                        <li>Accessories</li>
+                    </ul>
+                </li>
+                <li><strong>Health & Beauty</strong>
+                    <ul>
+                        <li>Skincare</li>
+                        <li>Haircare</li>
+                        <li>Cosmetics</li>
+                        <li>Personal Care</li>
+                    </ul>
+                </li>
+                <li><strong>Groceries</strong>
+                    <ul>
+                        <li>Fresh Produce</li>
+                        <li>Dairy Products</li>
+                        <li>Beverages</li>
+                        <li>Snacks</li>
+                    </ul>
+                </li>
+                <li><strong>Sports & Outdoors</strong>
+                    <ul>
+                        <li>Sports Equipment</li>
+                        <li>Outdoor Gear</li>
+                        <li>Fitness Accessories</li>
+                    </ul>
+                </li>
+                <li><strong>Books & Media</strong>
+                    <ul>
+                        <li>Books</li>
+                        <li>Magazines</li>
+                        <li>Music</li>
+                        <li>Movies</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Features</h3>
+            <ul>
+                <li>User-friendly Interface: Easy navigation and seamless shopping experience.</li>
+                <li>Secure Payment Options: Multiple secure payment methods for your convenience.</li>
+                <li>Fast Delivery: Reliable and quick delivery service to your doorstep.</li>
+                <li>Customer Support: Dedicated customer support team available 24/7.</li>
+            </ul>
+        </section>
+
+        <section class="service-category">
+            <h2>Software Development Services</h2>
+            <p>Isoko.rw also excels in providing top-notch software development services tailored to meet your business needs.</p>
+            <h3>Services Offered</h3>
+            <ul>
+                <li>Custom Software Development: Tailor-made software solutions designed to fit your unique requirements.</li>
+                <li>Mobile App Development: Development of intuitive and engaging mobile applications for iOS and Android platforms.</li>
+                <li>Web Development: Creation of dynamic, responsive, and user-friendly websites.</li>
+                <li>E-commerce Solutions: Comprehensive e-commerce solutions including website development, payment gateway integration, and maintenance.</li>
+                <li>Software Maintenance & Support: Ongoing support and maintenance to ensure your software runs smoothly.</li>
+                <li>Cloud Solutions: Cloud integration and migration services for enhanced scalability and efficiency.</li>
+                <li>API Development & Integration: Custom API development and integration services for seamless connectivity between your applications.</li>
+            </ul>
+            <h3>Technologies We Use</h3>
+            <ul>
+                <li>Programming Languages: Java, Python, JavaScript, PHP, Ruby, etc.</li>
+                <li>Frameworks: React, Angular, Vue.js, Django, Laravel, etc.</li>
+                <li>Databases: MySQL, PostgreSQL, MongoDB, etc.</li>
+                <li>Mobile Technologies: Swift, Kotlin, React Native, Flutter, etc.</li>
+                <li>Cloud Platforms: AWS, Azure, Google Cloud, etc.</li>
+            </ul>
+            <h3>Our Process</h3>
+            <ul>
+                <li>Consultation: Understanding your business needs and goals.</li>
+                <li>Planning: Creating a detailed project plan and timeline.</li>
+                <li>Development: Building the software using best practices and latest technologies.</li>
+                <li>Testing: Rigorous testing to ensure quality and performance.</li>
+                <li>Deployment: Launching the software and ensuring smooth operation.</li>
+                <li>Support: Providing ongoing support and maintenance.</li>
+            </ul>
+        </section>
+    </div>
+{% endblock main-content %}

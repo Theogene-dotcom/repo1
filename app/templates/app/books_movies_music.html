@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}books_movies_music{% endblock title %}
+{% block external_css %}
+<link rel="stylesheet" href="{% static "app/css/laptop.css" %}">
+{% endblock external_css %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+     <a href="{% url 'books_movies_music' %}" class="list-group-item list-group-item-action" aria-current='true'>All books_movies_music</a>
+    <a href="{% url 'books_movies_musicdata' 'books' %}" class="list-group-item list-group-item-action">books</a>
+    <a href="{% url 'books_movies_musicdata' 'movies' %}" class="list-group-item list-group-item-action">movies</a>
+    <a href="{% url 'books_movies_musicdata' 'music' %}" class="list-group-item list-group-item-action">music</a>
+    <a href="{% url 'books_movies_musicdata' 'above_100' %}" class="list-group-item list-group-item-action ">Above 100</a> 
+    <a href="{% url 'books_movies_musicdata' 'below_100' %}" class="list-group-item list-group-item-action ">Below 100</a> 
+        </div>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                {% for product in media_items %}
+                <div class="col-sm-4 text-center mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                <div class="item">
+                    <img src="{{product.product_image.url}}" width=200px height=230px alt="" class="img-fluid img-size">
+                    <div class="fm-bold">{{product.title}}</div>
+                    <div class="fm-bold">Rs.{{product.discounted_price}}
+                    <small class="fw-light text-decoration-line-through">
+                        {{product.selling_price}}
+                    </small>
+                    </div>
+                </div>
+            </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

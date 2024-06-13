@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}car{% endblock title %}
+{% block external_css %}
+<link rel="stylesheet" href="{% static "app/css/laptop.css" %}">
+{% endblock external_css %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+     <a href="{% url 'car' %}" class="list-group-item list-group-item-action" aria-current='true'>All cars</a>
+    <a href="{% url 'cardata' 'Toyota' %}" class="list-group-item list-group-item-action">Toyota</a>
+    <a href="{% url 'cardata' 'Honda' %}" class="list-group-item list-group-item-action">Honda</a>
+    <a href="{% url 'cardata' 'Ford' %}" class="list-group-item list-group-item-action">Ford</a>
+    <a href="{% url 'cardata' 'Chevrolet' %}" class="list-group-item list-group-item-action ">Chevrolet</a>
+    <a href="{% url 'cardata' 'above_500k' %}" class="list-group-item list-group-item-action ">Above 500000</a> 
+    <a href="{% url 'cardata' 'below_500k' %}" class="list-group-item list-group-item-action ">Below 500000</a> 
+        </div>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                {% for product in cars %}
+                <div class="col-sm-4 text-center mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                <div class="item">
+                    <img src="{{product.product_image.url}}" width=200px height=230px alt="" class="img-fluid img-size">
+                    <div class="fm-bold">{{product.title}}</div>
+                    <div class="fm-bold">Rs.{{product.discounted_price}}
+                    <small class="fw-light text-decoration-line-through">
+                        {{product.selling_price}}
+                    </small>
+                    </div>
+                </div>
+            </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

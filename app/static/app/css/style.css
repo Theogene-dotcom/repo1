@@ -1,0 +1,70 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.footer {
+    background-color: black; /* Pure black background */
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.footer .footer-section {
+    margin-bottom: 30px;
+}
+
+.footer h4 {
+    color: #f8f9fa;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #444; /* Add a subtle line under the title */
+    padding-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2.2;
+}
+
+.footer a {
+    color: #bbb; /* Lighter grey for links for better contrast and readability */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer a:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+    text-decoration: underline;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .footer .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

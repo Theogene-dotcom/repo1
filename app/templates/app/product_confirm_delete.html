@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block main-content %}
+<div class="container mt-3">
+    <h2>Delete Product</h2>
+    <p>Are you sure you want to delete the product "{{ product.title }}"?</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete" class="btn btn-danger">
+        <a href="{% url 'list_products' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

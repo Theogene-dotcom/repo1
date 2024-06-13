@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}beauty_personal_care{% endblock title %}
+{% block external_css %}
+<link rel="stylesheet" href="{% static "app/css/laptop.css" %}">
+{% endblock external_css %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+     <a href="{% url 'beauty_personal_care' %}" class="list-group-item list-group-item-action" aria-current='true'>All beauty_personal_care</a>
+    <a href="{% url 'beauty_personal_caredata' 'Oreal' %}" class="list-group-item list-group-item-action">Oreal</a>
+    <a href="{% url 'beauty_personal_caredata' 'Nivea' %}" class="list-group-item list-group-item-action">Nivea</a>
+    <a href="{% url 'beauty_personal_caredata' 'Estee_Lauder' %}" class="list-group-item list-group-item-action">Estee Lauder</a>
+    <a href="{% url 'beauty_personal_caredata' 'Clinique' %}" class="list-group-item list-group-item-action ">Clinique</a>
+    <a href="{% url 'beauty_personal_caredata' 'above_1000' %}" class="list-group-item list-group-item-action ">Above 1000</a> 
+    <a href="{% url 'beauty_personal_caredata' 'below_1000' %}" class="list-group-item list-group-item-action ">Below 1000</a> 
+        </div>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                {% for product in beauty_items %}
+                <div class="col-sm-4 text-center mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                <div class="item">
+                    <img src="{{product.product_image.url}}" width=200px height=230px alt="" class="img-fluid img-size">
+                    <div class="fm-bold">{{product.title}}</div>
+                    <div class="fm-bold">Rs.{{product.discounted_price}}
+                    <small class="fw-light text-decoration-line-through">
+                        {{product.selling_price}}
+                    </small>
+                    </div>
+                </div>
+            </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

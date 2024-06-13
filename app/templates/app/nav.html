@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">isoko.rw</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="selectcategoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Select Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="selectcategoryDropdown">
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
+              <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
+              <li><a class="dropdown-item" href="{% url 'desktop' %}">Desktop</a></li>
+              <li><a class="dropdown-item" href="{% url 'clothe' %}">Clothes</a></li>
+              <li><a class="dropdown-item" href="{% url 'electronic' %}">Electronics</a></li>
+              <li><a class="dropdown-item" href="{% url 'fashion' %}">Fashion and Apparel</a></li>
+              <li><a class="dropdown-item" href="{% url 'home_kitchen' %}">Home and Kitchen Appliance</a></li>
+              <li><a class="dropdown-item" href="{% url 'beauty_personal_care' %}">Beauty and Personal Care</a></li>
+              <li><a class="dropdown-item" href="{% url 'health_wellness' %}">Health and Wellness</a></li>
+              <li><a class="dropdown-item" href="{% url 'books_movies_music' %}">Books, Movies, and Music</a></li>
+              <li><a class="dropdown-item" href="{% url 'toys_games' %}">Toys and Games</a></li>
+              <li><a class="dropdown-item" href="{% url 'sports_outdoors' %}">Sports and Outdoors</a></li>
+              <li><a class="dropdown-item" href="{% url 'baby_kids' %}">Baby and Kids</a></li>
+              <li><a class="dropdown-item" href="{% url 'car' %}">car</a></li>
+              <li><a class="dropdown-item" href="{% url 'groceries_household' %}">Groceries and Household Essentials</a></li>
+              <li><a class="dropdown-item" href="{% url 'office_supplies' %}">Office Supplies</a></li>
+              <li><a class="dropdown-item" href="{% url 'jewelry_watches' %}">Jewelry and Watches</a></li>
+              <li><a class="dropdown-item" href="{% url 'home_improvement_tools' %}">Home Improvement and Tools</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'create_product' %}">Sell your product here</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning" type="submit">S</button>
+        </form>
+        <div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           {% if request.user.is_authenticated %}
+          <li class="nav-item dropdown mx-2">
+             <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ request.user.username|capfirst }} 
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+               <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+               <li><a class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
+               <li><a class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a></li>
+               <li><a class="dropdown-item" href="{% url "logout" %}">Logout</a></li>
+             </ul>
+           </li>
+           <li class="nav-item mx-2">
+            <a href="{% url 'showcart' %}" class="nav-link text-white"><span class="badge bg-danger" id='cartcountbadge'>{{cartcount}}</span> Cart </a>
+           </li>
+           {% else %}
+           <li class="nav-item mx-2">
+            <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
+           </li>
+           <li class="nav-item mx-2">
+            <a href="{% url 'customerregistration' %}" class="nav-link text-white">Registration</a>
+           </li>
+           {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+   </nav>

@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}sports_outdoors{% endblock title %}
+{% block external_css %}
+<link rel="stylesheet" href="{% static "app/css/laptop.css" %}">
+{% endblock external_css %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <div class="list-group">
+     <a href="{% url 'sports_outdoors' %}" class="list-group-item list-group-item-action" aria-current='true'>All sports_outdoors</a>
+    <a href="{% url 'sports_outdoorsdata' 'soccer' %}" class="list-group-item list-group-item-action">soccer</a>
+    <a href="{% url 'sports_outdoorsdata' 'basketball' %}" class="list-group-item list-group-item-action">basketball</a>
+    <a href="{% url 'sports_outdoorsdata' 'camping' %}" class="list-group-item list-group-item-action">camping</a>
+    <a href="{% url 'sports_outdoorsdata' 'above_1000' %}" class="list-group-item list-group-item-action ">Above 1000</a> 
+    <a href="{% url 'sports_outdoorsdata' 'below_1000' %}" class="list-group-item list-group-item-action ">Below 1000</a> 
+        </div>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                {% for product in sports_outdoors_items %}
+                <div class="col-sm-4 text-center mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                <div class="item">
+                    <img src="{{product.product_image.url}}" width=200px height=230px alt="" class="img-fluid img-size">
+                    <div class="fm-bold">{{product.title}}</div>
+                    <div class="fm-bold">Rs.{{product.discounted_price}}
+                    <small class="fw-light text-decoration-line-through">
+                        {{product.selling_price}}
+                    </small>
+                    </div>
+                </div>
+            </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+  <h1 class="mb-4">About Us</h1>
+  
+  <div class="row mb-5">
+    <div class="col-lg-8">
+      <p>Welcome to <strong>Isoko.rw</strong>, your ultimate destination for electronics, fashion, and more. Located in the heart of Rwanda, we are dedicated to offering top-quality products and exceptional customer service. Our mission is to provide a seamless shopping experience that caters to the diverse needs of our customers.</p>
+      
+      <h2>Who We Are</h2>
+      <p>Isoko.rw was founded with the vision of creating a reliable and convenient shopping platform for the Rwandan community. Our team comprises passionate professionals committed to sourcing the best products and delivering unparalleled customer service.</p>
+      
+      <h2>Our Products</h2>
+      <p>At Isoko.rw, we pride ourselves on our extensive range of products. Whether you are looking for the latest electronics, fashionable apparel, or everyday essentials, we have you covered. Our categories include:</p>
+      <ul>
+        <li><strong>Electronics</strong>: From smartphones and laptops to home appliances, we offer the latest technology to keep you connected and entertained.</li>
+        <li><strong>Fashion</strong>: Discover the latest trends in clothing, footwear, and accessories for men, women, and children.</li>
+        <li><strong>Home & Kitchen</strong>: Equip your home with high-quality appliances, furniture, and kitchenware.</li>
+      </ul>
+      
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Quality Assurance</strong>: We meticulously select our products to ensure they meet high standards of quality and durability.</li>
+        <li><strong>Customer Service</strong>: Our customer support team is always ready to assist you with any inquiries or issues, ensuring a smooth shopping experience.</li>
+        <li><strong>Fast Delivery</strong>: We understand the importance of timely delivery, and we strive to get your orders to you as quickly as possible.</li>
+        <li><strong>Secure Shopping</strong>: Our platform uses advanced security measures to protect your personal and payment information.</li>
+      </ul>
+      
+      <h2>Our Mission</h2>
+      <p>Our mission is to become Rwanda's most trusted online shopping destination by consistently delivering value, quality, and exceptional service. We aim to make shopping easy, enjoyable, and accessible for everyone.</p>
+      
+      <h2>Contact Us</h2>
+      <p>We love to hear from our customers. Whether you have a question, feedback, or need assistance, feel free to reach out to us:</p>
+      <ul>
+        <li><strong>Phone</strong>: +250 788 555 934</li>
+        <li><strong>Email</strong>: <a href="mailto:info@isoko.rw">info@isoko.rw</a></li>
+        <li><strong>Location</strong>: Kigali, Rwanda</li>
+      </ul>
+      
+      <p>Stay connected with us on social media for the latest updates and promotions:</p>
+      <ul>
+        <li><strong>Facebook</strong>: <a href="#">Isoko.rw</a></li>
+        <li><strong>Twitter</strong>: <a href="#">@isokorw</a></li>
+        <li><strong>Instagram</strong>: <a href="#">@isokorw</a></li>
+      </ul>
+      
+      <p>Thank you for choosing Isoko.rw. Happy shopping!</p>
+    </div>
+    <div class="col-lg-4">
+      <img src="{% static 'app/images/about_us.jpg' %}" class="img-fluid" alt="About Us">
+    </div>
+  </div>
+</div>
+{% endblock main-content %}

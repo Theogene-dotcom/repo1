@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Returns{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+  <h1 class="mb-4">Returns</h1>
+  <p>At Isoko.rw, we strive to ensure that our customers are completely satisfied with their purchases. If you are not satisfied with your order, you can return it to us for a refund or exchange. Below are the details of our returns policy:</p>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Return Policy</h2>
+      <p>Items can be returned within 30 days of the delivery date. To be eligible for a return, items must be unused, in their original condition, and in the original packaging. Certain types of items cannot be returned, such as perishable goods, custom products, and personal care items.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/returns/return_policy.jpg' %}" class="img-fluid" alt="Return Policy">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>How to Return an Item</h2>
+      <ol>
+        <li>Contact our customer service team at <a href="mailto:support@isoko.rw">support@isoko.rw</a> or call +250 788 555 934 to initiate the return process.</li>
+        <li>Provide your order number and details about the product you wish to return.</li>
+        <li>Our customer service team will provide you with a return authorization number and instructions on how to return your item.</li>
+        <li>Pack the item securely in its original packaging, including all accessories, manuals, and documentation.</li>
+        <li>Ship the item to the address provided by our customer service team.</li>
+      </ol>
+      <p>Please note that you will be responsible for the cost of return shipping unless the item was damaged or defective.</p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>Processing Your Return</h2>
+      <p>Once we receive your returned item, we will inspect it to ensure it meets the eligibility criteria. If the return is approved, we will process your refund or exchange within 7-10 business days. Refunds will be issued to the original payment method, and exchanges will be shipped out promptly.</p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>Exceptions</h2>
+      <p>There are some items that cannot be returned, including:</p>
+      <ul>
+        <li>Gift cards</li>
+        <li>Downloadable software products</li>
+        <li>Personalized items</li>
+        <li>Items marked as final sale</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Contact Us</h2>
+  <p>If you have any questions about our returns policy or need assistance with your return, please contact our customer support team:</p>
+  <ul>
+    <li><strong>Phone</strong>: +250 788 555 934</li>
+    <li><strong>Email</strong>: <a href="mailto:support@isoko.rw">support@isoko.rw</a></li>
+  </ul>
+</div>
+{% endblock main-content %}

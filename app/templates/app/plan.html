@@ -1,0 +1,63 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Plans - Isoko.rw{% endblock title %}
+
+{% block main-content %}
+    <div class="container">
+        <h1>Our Plans</h1>
+        <div class="plans-container">
+            <!-- Free Plan -->
+            <div class="plan">
+                <h2>Free Plan</h2>
+                <p>Perfect for starting small</p>
+                <div class="price">Free</div>
+                <ul>
+                    <li>5 items</li>
+                    <li>1 month duration</li>
+                    <li>Basic support</li>
+                </ul>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+
+            <!-- Starter Plan -->
+            <div class="plan">
+                <h2>Starter Plan</h2>
+                <p>Get started with more items</p>
+                <div class="price">$10/month</div>
+                <ul>
+                    <li>50 items</li>
+                    <li>1 month duration</li>
+                    <li>Standard support</li>
+                </ul>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan">
+                <h2>Premium Plan</h2>
+                <p>For established businesses</p>
+                <div class="price">$30/month</div>
+                <ul>
+                    <li>200 items</li>
+                    <li>1 month duration</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+
+            <!-- Gold Plan -->
+            <div class="plan">
+                <h2>Gold Plan</h2>
+                <p>The best for large businesses</p>
+                <div class="price">$50/month</div>
+                <ul>
+                    <li>Unlimited items</li>
+                    <li>1 month duration</li>
+                    <li>24/7 premium support</li>
+                </ul>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+{% endblock main-content %}

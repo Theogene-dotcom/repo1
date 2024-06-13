@@ -1,0 +1,86 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Payment Methods{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+  <h1 class="mb-4">Payment Methods</h1>
+  <p>At Isoko.rw, we offer a variety of secure and convenient payment options to make your shopping experience as smooth as possible. Below are the payment methods we accept:</p>
+  
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Credit and Debit Cards</h2>
+      <p>We accept major credit and debit cards, including:</p>
+      <ul>
+        <li>Visa</li>
+        <li>MasterCard</li>
+        <li>American Express</li>
+        <li>Discover</li>
+      </ul>
+      <p>All card payments are processed through our secure payment gateway, ensuring your card details are safe and protected.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/payments/credit_cards.jpg' %}" class="img-fluid" alt="Credit Cards">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Mobile Money</h2>
+      <p>For your convenience, we accept payments via mobile money services:</p>
+      <ul>
+        <li>MTN Mobile Money</li>
+        <li>Airtel Money</li>
+      </ul>
+      <p>Mobile money payments are quick, secure, and can be done from the comfort of your home.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/payments/mobile_money.jpg' %}" class="img-fluid" alt="Mobile Money">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Bank Transfers</h2>
+      <p>We also accept direct bank transfers. You can transfer the payment directly to our bank account. Our bank details are provided at checkout.</p>
+      <p>Once the transfer is complete, please email your payment receipt to <a href="mailto:payments@isoko.rw">payments@isoko.rw</a> to confirm your payment.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/payments/bank_transfer.jpg' %}" class="img-fluid" alt="Bank Transfer">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>PayPal</h2>
+      <p>For international customers, we accept payments via PayPal. Pay securely with your PayPal account or credit card through the PayPal gateway.</p>
+      <p>PayPal payments are instant and secure, ensuring a hassle-free checkout process.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/payments/paypal.jpg' %}" class="img-fluid" alt="PayPal">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Cash on Delivery (COD)</h2>
+      <p>We offer Cash on Delivery for selected locations. You can pay in cash when your order is delivered to your doorstep.</p>
+      <p>Please note that COD is available for specific regions and order values. Check eligibility at checkout.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/payments/cash_on_delivery.jpg' %}" class="img-fluid" alt="Cash on Delivery">
+    </div>
+  </div>
+
+  <h2>Security</h2>
+  <p>Your payment security is our top priority. We use industry-standard encryption and secure payment gateways to process all transactions. Your payment information is confidential and not shared with any third parties.</p>
+
+  <h2>Need Help?</h2>
+  <p>If you have any questions or need assistance with your payment, please contact our customer support team:</p>
+  <ul>
+    <li><strong>Phone</strong>: +250 788 555 934</li>
+    <li><strong>Email</strong>: <a href="mailto:support@isoko.rw">support@isoko.rw</a></li>
+  </ul>
+</div>
+{% endblock main-content %}

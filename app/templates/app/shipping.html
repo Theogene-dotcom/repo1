@@ -1,0 +1,68 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Shipping Information{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+  <h1 class="mb-4">Shipping Information</h1>
+  <p>At Isoko.rw, we strive to provide efficient and reliable shipping services to ensure your purchases reach you in a timely manner. Below are the details of our shipping policy:</p>
+
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h2>Shipping Methods</h2>
+      <p>We offer various shipping methods to suit your needs:</p>
+      <ul>
+        <li>Standard Shipping</li>
+        <li>Express Shipping</li>
+        <li>Overnight Shipping</li>
+      </ul>
+      <p>Shipping options and costs will be calculated at checkout based on your location and the weight of your order.</p>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'app/images/shipping/shipping_methods.jpg' %}" class="img-fluid" alt="Shipping Methods">
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>Shipping Times</h2>
+      <p>Estimated delivery times are as follows:</p>
+      <ul>
+        <li><strong>Standard Shipping</strong>: 5-7 business days</li>
+        <li><strong>Express Shipping</strong>: 2-3 business days</li>
+        <li><strong>Overnight Shipping</strong>: 1 business day</li>
+      </ul>
+      <p>Delivery times may vary depending on your location and other factors. You will receive a tracking number once your order has been shipped, allowing you to monitor its progress.</p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>International Shipping</h2>
+      <p>We offer international shipping to select countries. International shipping costs and delivery times will be calculated at checkout. Please note that international orders may be subject to customs fees, import duties, and taxes, which are the responsibility of the customer.</p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>Order Tracking</h2>
+      <p>Once your order has been shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status of your shipment through our shipping partner's website.</p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-12">
+      <h2>Shipping Issues</h2>
+      <p>If you experience any issues with your shipment, please contact our customer support team immediately. We will work with our shipping partners to resolve the issue as quickly as possible.</p>
+    </div>
+  </div>
+
+  <h2>Contact Us</h2>
+  <p>If you have any questions about our shipping policy or need assistance with your order, please contact our customer support team:</p>
+  <ul>
+    <li><strong>Phone</strong>: +250 788 555 934</li>
+    <li><strong>Email</strong>: <a href="mailto:support@isoko.rw">support@isoko.rw</a></li>
+  </ul>
+</div>
+{% endblock main-content %}

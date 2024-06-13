@@ -1,0 +1,44 @@
+{% block footer %}
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- About -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4>About Isoko.rw</h4>
+                <p>Isoko.rw is your one-stop shop for electronics, fashion, and more, offering top quality products and excellent customer service.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{% url 'ProductView'%}">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Customer Service -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Money-back guarantee!</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+250780000000">+250 780 000 000</a></li>
+                    <li><a href="mailto:info@kigalibusiness.com">info@kigalibusiness.com</a></li>
+                    <li><a href="#">Kigali, Rwanda</a></li>
+                    <li>Follow us: <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}
